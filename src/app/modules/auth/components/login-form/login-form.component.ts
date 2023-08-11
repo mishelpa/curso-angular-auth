@@ -36,7 +36,7 @@ export class LoginFormComponent {
           this.status = 'success'
           this.router.navigate(['/app'])
         },
-        error: () => {
+        error: (error) => {
           this.status = 'failed'
         }
       })
