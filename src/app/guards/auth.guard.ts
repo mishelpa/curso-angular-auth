@@ -24,7 +24,7 @@ import { Observable } from 'rxjs';
 
 // }
 
-export const authGuard: CanActivateFn = () => {
+export const AuthGuard: CanActivateFn = () => {
   const token: string | unknown = inject(TokenService).getToken();
   if (!token) {
     inject(Router).navigate(['/login']);
